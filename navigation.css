@@ -1,0 +1,125 @@
+
+#nav-toggle span {
+    display: none;
+}
+
+.main-nav {
+    z-index: 999;
+    position: fixed;
+    top:0; 
+    width: 100vw;
+    background: #dd6b4d;
+}
+
+.main-nav ul {
+    display: flex;   
+}
+
+.main-nav li {
+    list-style: none outside;
+    flex: 0 1 20%;
+    text-align: center;
+    /* padding: 1rem 0; */
+}
+
+
+.main-nav a {
+    display: inline-block;
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+   position: relative;
+   outline: none;
+}
+
+.main-nav a:before {
+    display: block;
+    content: '';
+    height: 5px;
+    background: aliceblue;
+    position: absolute;
+    top: -.5em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out ;
+}
+
+.main-nav a:focus::before,
+.main-nav a:hover::before {
+    transform: scale(1,1);
+}
+
+
+@media screen and (max-width: 750px ) {
+    .main-nav {
+        width: 100vw; height: 100vh;
+        position: fixed;
+        top: 0; 
+        background: rgba(250,250,250,0.9);
+        align-items: center;
+        justify-content: center;
+        transform:scale(1,0);
+        transition: transform 400ms ease-in-out;
+    }
+
+    .main-nav ul {
+        display: block;  
+    }
+
+    .main-nav li {
+        display: block;
+        list-style: none outside;
+        padding: 1em 0;
+        opacity: 1;
+    }
+
+    .main-nav a {
+        display: block;
+        background-color: #fff;
+        color: #dd6b4d;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1em 2em;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+    }
+
+    #nav-main-toggle {
+        display: none;
+    }
+
+    #nav-toggle {
+        color: #dd6b4d;
+        position: fixed;
+        top: 2rem; left: 2rem;
+        z-index: 1000;
+        font-size: 2rem;
+    }
+
+
+    #nav-toggle:before {
+        content:'\f0c9';
+        color: #dd6b4d;
+    }
+
+    #nav-main-toggle:checked ~ .main-nav {
+        display: flex;
+        transform:scale(1,1);
+    }
+
+    #nav-main-toggle:checked + #nav-toggle::before {
+        content: '\f00d';
+        color: #dd6b4d;
+    }
+
+    #nav-main-toggle:checked ~ .main-nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+}
+
+
