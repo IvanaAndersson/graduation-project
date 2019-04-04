@@ -1,101 +1,152 @@
 #about {
-    background-color: #e7eaf6;
+    background-color: var(--color-bgrd-main);
 }
 
 section#about header {
-    padding-top: 5rem;
-    border-top: 2px solid #183661;
+    padding-top: var(--section-padding-top);
+    border-top: 2px solid rgba(24, 54, 97,0.2);
 }
 
 section#about header h2 {
+    font-size: var(--head2-size);
+    color: var(--color-text-header);
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: var(--margin-bottom-general);
 }
 
 section#about header p {
+    color: var(--color-text-header);
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: var(--margin-bottom-general);
 }
 
 article.section-one {
     padding: 2rem;
-    height: 400px;
-    background-color: #a2a8d3;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-    /* margin-bottom: -10vw; */
-    clear: both;
+    background: var(--color-bgrd-secondary);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); 
 }
 
 .hexagon {
-    background-color: #e7eaf6;
-    position: relative;
-    width: 40vmin;
-    height: 35vmin;
-    margin: 0 2rem;
-    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-    shape-outside: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-    float:left;
+    /* display: flex;
+    flex-direction: column; */
 }
-
-
-.hexagon:before {
-    content: '';
-    width: 30vmin;
-    height: 30vmin;
-    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);   
-}
-
-
-.hexagon img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: 0% 50%;
-    clip-path: inherit;
-    transition: transform 200ms ease-in 150ms;
-}
-
-.hexagon:hover img {
-    transform: translate(-50%, -50%) rotate(-110deg);
-}
-
 
 .hexagon figure {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    width: 20vmin;
-    margin: 0 auto;
-    padding-top: 5rem;
+    margin: 1rem auto;
     text-align: center;
 }
 
+.hexagon img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 1rem auto;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    shape-outside: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+
 .hexagon figure h2 {
+    font-size: var(--head2-size);
     font-size: 1em;
 }
 
+.description {
+    text-align: center;
+}
+
 .description h4 {
+    font-size: var(--head4-size);
     font-size: 1.2em;
-    margin-bottom: 2em;
+    margin-bottom: var(--margin-bottom-general);
 }
 
 .description p {
-    margin-bottom: 1em;
+    margin-bottom: var(--margin-bottom-general);
 }
 
+.description p:last-child {
+    margin-bottom: calc(7vw + var(--margin-bottom-general));
+}
 
 article.section-two {
     padding: 2rem;
-    height: 400px;
-    /* padding-top: 10vw; */
-    background-color: #e7eaf6;
-    clear: both;
+    background-color: var(--color-bgrd-main);
 }
 
-article.section-two .hexagon {
-    float: right;
-    background-color: #a2a8d3;
+/* FOR DEVICES WITH HOVER */
+
+@media (hover: hover) {
+    
+    article.section-one {
+        padding: 3rem;
+        /* height: 400px; */
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        clear: both;
+    }
+
+    .hexagon {
+        background-color: var(--color-bgrd-main); 
+        position: relative;
+        width: 40vmin;
+        height: 35vmin;
+        margin: 0 var(--margin-bottom-general);
+        clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+        shape-outside: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+        float:left;
+    }
+
+    .hexagon:before {
+        content: '';
+        width: 30vmin;
+        height: 30vmin;
+        clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);   
+    }
+
+    .hexagon:hover img {
+        transform: translate(-50%, -50%) rotate(-110deg);
+    }
+
+    .hexagon img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 0% 50%;
+        clip-path: inherit;
+        transition: transform 200ms ease-in 150ms;
+    }
+
+
+    .hexagon figure {
+        width: 20vmin;
+        padding-top: 5rem;
+        text-align: center;
+        
+    }
+
+    article.section-two {
+        clear: both;
+    }
+    
+    article.section-two .hexagon {
+        background-color: var(--color-bgrd-secondary);
+        float: right;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .description p {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+
 }

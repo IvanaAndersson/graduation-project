@@ -1,45 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Merienda:700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 @import url('reset.css');
+@import url('typography.css');
+@import url('variables.css');
+
 @import url('site-header.css');
 @import url('navigation.css');
+
 @import url('about-section.css');
-
-
-html {
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-/* MAIN CONTENT */
-
+@import url('services-section.css');
 
 .site-content {
-    background-color: aliceblue;
-    
-}
-
-section#services {
-    max-width: 100vw;
-    height: 100vh;
-    padding: 5rem;
-}
-
-section#services h2,
-section#services > p {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.service-card {
-    width: 30%;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.5);
-}
-
-.service-card,
-.card-header,
-.card-content,
-.card-footer {
-    padding: 1rem;
+    background-color: var(--color-bgrd-main);
 }

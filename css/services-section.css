@@ -1,0 +1,40 @@
+
+section#services {
+    max-width: 100vw;
+    height: 100vh;
+    padding: var(--section-padding-top);
+    border-top: 2px solid rgba(24, 54, 97,0.2);
+}
+
+section#services header h2,
+section#services header p {
+    color: var(--color-text-header);
+    margin-bottom: calc(var(--margin-bottom-general) + 1rem);
+    text-align: center;
+}
+
+section#services header h2 {
+    font-size: var(--head2-size);
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service-card {
+    width: 30%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.5);
+}
+
+.service-card,
+.card-header,
+.card-content,
+.card-footer {
+    padding: 1rem;
+}
+
+
+
+
