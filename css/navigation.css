@@ -8,7 +8,7 @@
     position: fixed;
     top:0; 
     width: 100vw;
-    background: #dd6b4d;
+    background: var(--color-details);
 }
 
 .main-nav ul {
@@ -19,7 +19,6 @@
     list-style: none outside;
     flex: 0 1 20%;
     text-align: center;
-    /* padding: 1rem 0; */
 }
 
 
@@ -39,7 +38,7 @@
     height: 5px;
     background: aliceblue;
     position: absolute;
-    top: -.5em;
+    top: -0.5em;
     left: 0;
     right: 0;
     transform: scale(0, 1);
@@ -79,7 +78,7 @@
     .main-nav a {
         display: block;
         background-color: #fff;
-        color: #dd6b4d;
+        color: var(--color-details);
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
@@ -93,7 +92,7 @@
     }
 
     #nav-toggle {
-        color: #dd6b4d;
+        color: var(--color-details);
         position: fixed;
         top: 2rem; left: 2rem;
         z-index: 1000;
@@ -103,7 +102,7 @@
 
     #nav-toggle:before {
         content:'\f0c9';
-        color: #dd6b4d;
+        color: var(--color-details);
     }
 
     #nav-main-toggle:checked ~ .main-nav {
@@ -113,7 +112,7 @@
 
     #nav-main-toggle:checked + #nav-toggle::before {
         content: '\f00d';
-        color: #dd6b4d;
+        color: var(--color-details);
     }
 
     #nav-main-toggle:checked ~ .main-nav a {

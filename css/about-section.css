@@ -79,7 +79,7 @@ article.section-two {
 
 /* FOR DEVICES WITH HOVER */
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     
     article.section-one {
         padding: 3rem;
