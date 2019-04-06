@@ -2,9 +2,16 @@
     background-color: var(--color-bgrd-main);
 }
 
+
 section#about header {
     padding-top: var(--section-padding-top);
     border-top: 2px solid rgba(24, 54, 97,0.2);
+}
+
+@media screen and (max-width: 500px) {
+    section#about header{
+        padding-top: calc(var(--section-padding-top)  / 2);
+    }
 }
 
 section#about header h2 {
@@ -24,11 +31,6 @@ article.section-one {
     padding: 2rem;
     background: var(--color-bgrd-secondary);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); 
-}
-
-.hexagon {
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .hexagon figure {
@@ -60,7 +62,6 @@ article.section-one {
 
 .description h4 {
     font-size: var(--head4-size);
-    font-size: 1.2em;
     margin-bottom: var(--margin-bottom-general);
 }
 
@@ -83,7 +84,6 @@ article.section-two {
     
     article.section-one {
         padding: 3rem;
-        /* height: 400px; */
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
         clear: both;
     }

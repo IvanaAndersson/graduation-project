@@ -1,4 +1,3 @@
-
 #nav-toggle span {
     display: none;
 }
@@ -20,8 +19,6 @@
     flex: 0 1 20%;
     text-align: center;
 }
-
-
 .main-nav a {
     display: inline-block;
     color: aliceblue;
@@ -33,9 +30,9 @@
 }
 
 .main-nav a:before {
-    display: block;
+    display: inline-block;
     content: '';
-    height: 5px;
+    height: 10px;
     background: aliceblue;
     position: absolute;
     top: -0.5em;
@@ -85,6 +82,11 @@
         padding: 1em 2em;
         opacity: 0;
         transition: opacity 200ms ease-in-out;
+    }
+
+    .main-nav a:before {
+        height: 5px;
+        background: var(--color-details);
     }
 
     #nav-main-toggle {

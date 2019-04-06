@@ -6,6 +6,13 @@ section#services {
     border-top: 2px solid rgba(24, 54, 97,0.2);
 }
 
+@media screen and (max-width: 500px) {
+    section#services {
+        height:auto;
+        padding-top: calc(var(--section-padding-top)  / 2);
+    }
+}
+
 section#services header h2,
 section#services header p {
     color: var(--color-text-header);
@@ -19,11 +26,13 @@ section#services header h2 {
 
 .card-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .service-card {
-    width: 30%;
+    flex: 1 1 30%;
+    margin: 5%;
     border: 1px solid #ccc;
     box-shadow: 0 0 1rem 0 rgba(0,0,0,0.5);
 }
@@ -34,7 +43,4 @@ section#services header h2 {
 .card-footer {
     padding: 1rem;
 }
-
-
-
 
