@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  .container {
+    border: 1px solid #aaa;
+    border-radiue: 3px;
+    display: flex;
+    height: 420px;
+    margin: 120px auto;
+    max-width: 720px;
+    position: relative;
+  }
+  
+  .half {
+    align-items: center;
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .half.alt {
+    background: #eee;
+  }
+  
+  .form {
+    background-color: white;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 45px -6px rgba(0, 0, 0, 0.26);
+    position: absolute;
+    height: 100%;
+    top: -45px;
+    width: 50%;
+    left: 5%;
+    overflow: hidden;
+    transition: 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .form-inner {
+    transition: 600ms ease-in-out;
+  }
+  
+  .label {
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .signup-trigger, .login-trigger {
+    display: none;
+  }
+  
+  .login-trigger:checked ~ .form {
+    left: 45%;
+  }
+  .login-trigger:checked ~ .form .form-inner {
+    margin-top: -135px;
+  }
+  .login-trigger:checked ~ .form .form-inner .fname, .login-trigger:checked ~ .form .form-inner .lname {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .login-trigger:checked ~ .form .button-text {
+    transform: translateY(-100%);
+  }
+  
+  .input {
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    display: block;
+    padding: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 70%;
+  }
+  
+  .button {
+    position: relative;
+    align-items: center;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45px;
+    justify-content: center;
+    padding: 0;
+    width: 180px;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+  }
+  .button.login, .button.signup {
+    border: 2px solid #4a90e2;
+    color: #4a90e2;
+    margin-bottom: 50px;
+  }
+  .button.login:hover, .button.signup:hover {
+    background-color: #4a90e2;
+    color: white;
+  }
+  .button.login:active, .button.signup:active {
+    background-color: #72a8e8;
+  }
+  .button.submit {
+    background-color: #45c550;
+    border-color: #45c550;
+    color: white;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+  .button.submit:active {
+    background-color: #74d47c;
+  }
+  
+  .button-text {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: 300ms ease-in-out;
+  }
+  

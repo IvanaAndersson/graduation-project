@@ -10,6 +10,7 @@
 
 @import url('about-section.css');
 @import url('services-section.css');
+@import url('form.css');
 
 .site-content {
     background-color: var(--color-bgrd-main);
