@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/site.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Graduation project mockup</title>
+    <title>Northern Star - IT Consulting Company</title>
     
 </head>
 <body>
     
     <header class="site-header">
+        
         <input type="checkbox" name="nav-main-toggle" id="nav-main-toggle" class="nav-toggle">
         <label for="nav-main-toggle" id="nav-toggle" class="fas">
             <span>Menu</span>
@@ -27,16 +28,17 @@
             </ul>
         </nav>
 
-        <a href="#">
-            <img src="./img/north-star.svg" alt="company logo north star" class="company-logo">
-        </a>
-
         <h1>
-            <span class="font">N</span>orthern <span class="font">S</span>tar
+            <p>
+                <span class="font">N</span>orthern <span class="font">S</span>tar
+            </p>
+            <a href="#">
+                <img src="./img/north-star.svg" alt="company logo north star" class="company-logo">
+            </a>
         </h1>
 
-        <p>Short description - 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla delectus ea quidem quis enim aliquid id nihil repellat officia illo, porro iusto sint assumenda.
+        <p>
+            Let our company help you in all your technological endeavours. We can make a difference!  
         </p>
 
         <ul class="social-media-icons">
@@ -161,37 +163,40 @@
 
         <section id="contacts">
             <div class="container">
-                <div class="half alt">
+                <section class="half alt">
                     <button class="button signup" type="button">
                         <label class="label" for="signup">
                             <span>Newsletter sign up</span>
                         </label>
                     </button>
-                </div>
-                <div class="half">
-                    <button class="button login" type="button">
-                        <label class="label" for="login">
+                </section>
+                <section class="half">
+                    <button class="button contact" type="button">
+                        <label class="label" for="contact">
                             <span>Contact Us</span>
                         </label>
                     </button>
-                </div>
-                <input class="signup-trigger" id="signup" type="radio" name="signform" />
-                <input class="login-trigger" id="login" type="radio" name="signform"/>
-                <div class="form">
+                </section>
+
+                <input type="radio" id="signup" name="signform" class="signup-trigger"  />
+                <input type="radio" id="contact" name="signform" class="contact-trigger"  />
+                
+                <form class="form">
                     <div class="form-inner">
                         <h2>Sign up for our Newsletter!</h2>
-                        <input class="input fname" type="text" placeholder="First Name" />
-                        
-                        <input class="input email" type="text" placeholder="Email" />
 
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        <input type="text" class="input fname"  placeholder="First Name" />
                         
-                        <button class="button submit" type="button">
+                        <input type="text" class="input email" placeholder="Email" />
+
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        
+                        <button type="button" class="button submit" >
                             <span class="button-text signup">Newsletter sign up</span>
-                            <span class="button-text login">Contact Us</span>
+                            <span class="button-text contact">Contact Us</span>
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
 
@@ -204,9 +209,7 @@
         </div>
     </footer>
     
-    <script src="./index.js"> 
-
-    </script>
+    <script src="./index.js"></script>
     
 </body>
 </html>

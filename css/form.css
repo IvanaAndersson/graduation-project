@@ -2,16 +2,18 @@ section#contacts {
   max-width: 100vw;
   height: 100vh;
   border-top: 2px solid rgba(24, 54, 97,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  
   border: 1px solid var(--color-bgrd-secondary);
   border-radius: 0.3rem;
   display: flex;
-  height: 550px;
-  margin: 120px auto;
-  max-width: 750px;
+  margin: 10rem auto;
+  width: 50vw;
+  height: 60vh;
   position: relative;
 }
 
@@ -72,28 +74,28 @@ section#contacts {
   cursor: pointer;
 }
 
-.signup-trigger, .login-trigger {
+.signup-trigger, .contact-trigger {
   display: none;
 }
 
-.login-trigger:checked ~ .form {
+.contact-trigger:checked ~ .form {
   left: 45%;
 }
-.login-trigger:checked ~ .form .form-inner {
+.contact-trigger:checked ~ .form .form-inner {
   margin-top: -110px;
 }
-.login-trigger:checked ~ .form .form-inner .fname, 
-.login-trigger:checked ~ .form .form-inner .lname,
-.login-trigger:checked ~ .form .form-inner h2 {
+.contact-trigger:checked ~ .form .form-inner .fname, 
+.contact-trigger:checked ~ .form .form-inner .lname,
+.contact-trigger:checked ~ .form .form-inner h2 {
   opacity: 0;
   visibility: hidden;
 }
 
-.login-trigger:checked ~ .form .form-inner textarea {
+.contact-trigger:checked ~ .form .form-inner textarea {
   opacity: 1;
 }
 
-.login-trigger:checked ~ .form .button-text {
+.contact-trigger:checked ~ .form .button-text {
   transform: translateY(-100%);
 }
   
@@ -116,8 +118,8 @@ section#contacts {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 45px;
+  width: 12em;
+  height: 4em;
   position: relative;
   background: none;
   border: 2px solid transparent;
@@ -127,24 +129,24 @@ section#contacts {
   transition: 300ms ease-in-out;
   overflow: hidden;
 }
-.button.login, .button.signup {
-  border: 2px solid #4a90e2;
-  color: #4a90e2;
+.button.contact, .button.signup {
+  border: 2px solid var(--color-text-header);
+  color: var(--color-text-header);
   margin-bottom: 50px;
 }
-.button.login:hover, .button.signup:hover {
-  background-color: #4a90e2;
-  color: white;
+.button.contact:hover, .button.signup:hover {
+  background-color: var(--color-text-header);
+  color: #fff;
 }
-.button.login:active, .button.signup:active {
-  background-color: #72a8e8;
+.button.contact:active, .button.signup:active {
+  background-color: #a2a8d3;
 }
 .button.submit {
   display: block;
   width: 70%;
   background-color: var(--color-details);
   border-color: var(--color-details);
-  color: white;
+  color: #fff;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -160,4 +162,35 @@ section#contacts {
   align-items: center;
   height: 100%;
   transition: 300ms ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  
+  .container {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .form {
+    position: absolute;
+    width: 85%;
+    height: auto;
+    top: -45px;
+    left: 10%;
+    overflow: hidden;
+    
+  }
+
+  .form-inner textarea {
+    height: 200px;
+  }
+
+  .contact-trigger:checked ~ .form {
+    top: 350px; left: 10%;
+  }
+ 
+
 }
