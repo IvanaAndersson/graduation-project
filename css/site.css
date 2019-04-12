@@ -18,24 +18,21 @@
     background-color: var(--color-bgrd-main);
     position: relative;
     z-index: 1;
-    box-shadow: 0 3px 5px #222;
+    box-shadow: 0 3px 5px #333;
 }
-
 
 .site-footer {
     background-color: var(--color-bgrd-secondary);
-    height: 240px;
+    height: 20vh;
     position: relative;
     z-index: -2;
 }
 
 .footer-wrapper {
     position: fixed;
-    left: 50%;
     bottom: 0;
-    margin-left: -300px;
+    left: 0;
     z-index: -1;
     color: var(--color-text-header);
-    padding: 1px;
-    padding-bottom: 60px;
+    padding: 2rem;
 }

@@ -165,6 +165,9 @@ section#contacts {
 }
 
 @media screen and (max-width: 900px) {
+  section#contacts {
+    padding-top: var(--section-padding-top);
+  }
   
   .container {
     width: 90vw;

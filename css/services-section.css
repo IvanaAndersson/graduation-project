@@ -17,14 +17,14 @@ section#services header p {
 }
 
 section#services header h2 {
-    font-size: var(--head2-size);
+    font-size: calc(var(--head2-size) - 0.5em);
 }
 
 .main-wrapper {
-    height: 50vh;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /* 
@@ -32,7 +32,7 @@ section#services header h2 {
  */
 
 .card-wrapper {
-    flex: 1 1 35%;
+    flex: 1 1 40%;
     margin: 5%;
     border: 1px solid #ccc;
     box-shadow: 0 0 2rem 1rem rgba(150,150,150,0.5);
@@ -49,7 +49,7 @@ section#services header h2 {
 }
 
 .service-card img {
-    width: 15%;
+    width: 10%;
     height: auto;
     padding: 0.5rem;
     position: absolute;
@@ -65,7 +65,21 @@ section#services header h2 {
 }
 
 .card-front {
-    padding: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-front h3 {
+    margin: var(--margin-bottom-general);
+}
+
+@media screen and (min-width: 1100px) {
+
+    .card-front h3,
+    .card-content {
+        margin: var(--margin-bottom-general);
+    }
+
 }
 
 .service-card .card-back {
@@ -98,14 +112,24 @@ section#services header h2 {
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     section#services {
         height:auto;
         padding-top: calc(var(--section-padding-top)  / 2);
     }
 
     .card-wrapper {
+        height: 30vh;
         flex: 1 1 50%;
+    }
+
+    .card-front h3,
+    .card-content {
+        margin: 1rem;
+    }
+
+    .service-card img {
+        width: 15%;
     }
 }
 
@@ -166,18 +190,10 @@ section#services header h2 {
     z-index: 20;
 }
 
-
-@media screen and (max-width: 800px) {
-    .banner-box h1,
-    .banner-box h3 {
-        width: 100%;
-    }
-}
-
 .services-content {
     padding: 2rem;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -263,8 +279,11 @@ section#services header h2 {
     margin-left: 2vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: 0.5fr 3rem 1fr 2rem ;
+}
 
+.backend-grid {
+    grid-column-gap: 1rem;
 }
 
 .programming-languages img {
@@ -272,8 +291,33 @@ section#services header h2 {
     height: auto;
 }
 
-.css-logo {
-    grid-column: 3/ span 1;
-    grid-row: 2/ span 1;
+.html-logo,
+.postgres-logo {
+    grid-row: 1 / span 2;
 }
 
+.ps-logo,
+.haskell-logo {
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 2;
+}
+
+.css-logo,
+.erlang-logo {
+    grid-column: 3/ span 1;
+    grid-row: 3/ span 2;
+}
+
+
+@media screen and (max-width: 800px) {
+    .banner-box h1,
+    .banner-box h3 {
+        width: 100%;
+    }
+
+    .list, .programming-languages {
+        flex: 1 1 80%;
+        margin-bottom: var(--margin-bottom-general);
+    }
+
+}
