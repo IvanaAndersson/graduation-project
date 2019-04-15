@@ -1,0 +1,150 @@
+#about {
+    background-color: var(--color-bgrd-secondary);
+    border-top: 2px solid rgba(24, 54, 97,0.2);
+
+    header {
+        padding: var(--section-padding-top) 0;
+        background-color: var(--color-bgrd-main);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#about header{
+        padding-top: calc(var(--section-padding-top)  / 2);
+    }
+}
+
+article.section-one {
+    padding: 2rem;
+    background: var(--color-bgrd-main);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); 
+}
+
+.hexagon {
+    figure {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem auto;
+        text-align: center;
+
+        h2 {
+            font-size: var(--head2-size);
+            font-size: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-text-header);
+        }
+    }
+
+    img {
+        display: block;
+        width: 60%;
+        height: auto;
+        margin: 1rem auto;
+        clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+        shape-outside: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    }
+}
+
+.description {
+    text-align: center;
+
+    h4 {
+        font-size: var(--head4-size);
+        margin-bottom: var(--margin-bottom-general);
+    }
+
+    p {
+        margin-bottom: var(--margin-bottom-general);
+    }
+
+    p:last-child {
+        margin-bottom: calc(7vw + var(--margin-bottom-general));
+    }
+        
+}
+
+article.section-two {
+    padding: 2rem;
+    background-color: var(--color-bgrd-secondary);
+}
+
+
+/* 
+ * FOR DEVICES WITH HOVER 
+ */
+ 
+
+@media (hover: hover) and (pointer: fine) {
+    
+    article.section-one {
+        padding: 3rem;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        clear: both;
+    }
+
+    article.section-two {
+        clear: both;
+
+        .hexagon {
+            background-color: var(--color-bgrd-main);
+            float: right;
+        }
+    }
+
+    .hexagon:before {
+        content: '';
+        width: 30vmin;
+        height: 30vmin;
+        clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);   
+    }
+
+    .hexagon {
+        background-color: var(--color-bgrd-secondary); 
+        position: relative;
+        width: 40vmin;
+        height: 35vmin;
+        margin: 0 var(--margin-bottom-general);
+        clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+        shape-outside: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+        float:left;
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 0% 50%;
+            clip-path: inherit;
+            transition: transform 200ms ease-in 150ms;
+        }
+
+        figure {
+            width: 20vmin;
+            padding-top: 5rem;
+            text-align: center;
+            
+        }
+    }    
+
+    .hexagon:hover img {
+        transform: translate(-50%, -50%) rotate(-110deg);
+    }
+
+    .description {
+        text-align: left;
+        padding-left: 4rem;
+
+        p {
+            width: 80%;
+            margin-bottom: 1em;
+        }
+    }
+
+}

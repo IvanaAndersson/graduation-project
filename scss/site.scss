@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Merienda:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import './modules/reset';
+@import './modules/typography';
+@import './modules/variables';
+
+@import './components/navigation';
+@import './components/section-header';
+
+@import './sections/site-header';
+@import './sections/about-section';
+@import './sections/services-section';
+@import './sections/projects-section';
+@import './sections/contacts-section';
+
+
+
+.site-content,
+.services-content {
+    background-color: var(--color-bgrd-main);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 5px #333;
+}
+
+.site-footer {
+    background-color: var(--color-bgrd-secondary);
+    height: 20vh;
+    position: relative;
+    z-index: -2;
+
+    .footer-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        color: var(--color-text-header);
+        padding: 2rem;
+    }
+    
+}
+

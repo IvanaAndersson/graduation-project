@@ -1,0 +1,11 @@
+.section-header  {
+    h2 {
+        font-size: calc(var(--head2-size) - 0.5em);
+    }
+
+    h2, p {
+        color: var(--color-text-header);
+        text-align: center;
+    }
+    
+}
