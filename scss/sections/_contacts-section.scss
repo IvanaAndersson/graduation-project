@@ -8,7 +8,7 @@
 
   
   .container {
-    border: 1px solid var(--color-bgrd-secondary);
+    border: 1px solid $color-bgrd-secondary;
     border-radius: 0.3rem;
     display: flex;
     margin: 10rem auto;
@@ -67,7 +67,7 @@
           opacity: 0;
 
           &::placeholder {
-            font-family: var(--font-family-base);
+            font-family: $ff-base;
           }
 
         }
@@ -102,7 +102,7 @@
     }
       
     .input, textarea {
-      font-family: var(--font-family-base);
+      font-family: $ff-base;
       display: block;
       width: 70%;
       border: none;
@@ -116,7 +116,7 @@
     }
 
     .button {
-      font-family: var(--font-family-base);
+      font-family: $ff-base;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -133,14 +133,14 @@
 
       &.contact, 
       &.signup {
-        border: 2px solid var(--color-text-header);
-        color: var(--color-text-header);
+        border: 2px solid $color-text-header;
+        color: $color-text-header;
         margin-bottom: 50px;
       }
 
       &.contact:hover, 
       &.signup:hover {
-        background-color: var(--color-text-header);
+        background-color: $color-text-header;
         color: #fff;
       }
 
@@ -152,8 +152,8 @@
       &.submit {
         display: block;
         width: 70%;
-        background-color: var(--color-details);
-        border-color: var(--color-details);
+        background-color: $color-details;
+        border-color: $color-details;
         color: #fff;
         margin-top: 30px;
         margin-left: auto;
@@ -179,7 +179,7 @@
 
 @media screen and (max-width: 900px) {
   #contacts {
-    padding-top: var(--section-padding-top);
+    padding-top: $section-pt;
     
     .container {
       width: 90vw;

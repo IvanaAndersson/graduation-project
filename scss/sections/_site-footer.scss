@@ -1,0 +1,17 @@
+
+.site-footer {
+    background-color: $color-bgrd-secondary;
+    height: 20vh;
+    position: relative;
+    z-index: -2;
+
+    .footer-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        color: $color-text-header;
+        padding: 2rem;
+    }
+    
+}

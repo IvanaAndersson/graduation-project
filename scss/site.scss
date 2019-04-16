@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Merienda:700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
 @import './modules/reset';
-@import './modules/typography';
 @import './modules/variables';
+@import './modules/typography';
 
 @import './components/navigation';
 @import './components/section-header';
@@ -13,31 +18,13 @@
 @import './sections/services-section';
 @import './sections/projects-section';
 @import './sections/contacts-section';
-
+@import './sections/site-footer';
 
 
 .site-content,
 .services-content {
-    background-color: var(--color-bgrd-main);
+    background-color: $color-bgrd-main;
     position: relative;
     z-index: 1;
     box-shadow: 0 3px 5px #333;
 }
-
-.site-footer {
-    background-color: var(--color-bgrd-secondary);
-    height: 20vh;
-    position: relative;
-    z-index: -2;
-
-    .footer-wrapper {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        color: var(--color-text-header);
-        padding: 2rem;
-    }
-    
-}
-
