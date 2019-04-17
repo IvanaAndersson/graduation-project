@@ -1,7 +1,6 @@
 
 .site-header {
-    max-width: 100vw;
-    height: 100vh;
+    @extend %section-dimensions;
     background: linear-gradient(rgba(231, 234, 246,0.5),rgba(231, 234, 246,0.7)) , center / cover url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/pattern_(3).svg') no-repeat;
     color: $color-text-header;
     display: grid;
@@ -13,8 +12,7 @@
         position: relative;
 
         &::after {
-            display: block;
-            content: '';
+            @extend %pseudo-elements;
             width: 120px; height: 120px;
             background: url('https://image.flaticon.com/icons/svg/1553/1553422.svg') center no-repeat;
             background-size: cover;
@@ -51,15 +49,12 @@
 
 .social-media-icons  {
     grid-row: 3 /span 1;
-    display: flex;   
-    justify-content: center;
-    align-items: center; 
+    @extend %flex-centered;
 
     li {
         
         &::before {
-            display: block;
-            content: '';
+            @extend %pseudo-elements;
             font-size: 1.5em;
             margin: 1rem;
         }

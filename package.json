@@ -1,0 +1,29 @@
+{
+  "name": "graduation-project",
+  "version": "1.0.0",
+  "description": "my project for the CSS Advanced course",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanaAndersson/graduation-project.git"
+  },
+  "author": "Ivana Andersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanaAndersson/graduation-project/issues"
+  },
+  "homepage": "https://github.com/IvanaAndersson/graduation-project#readme"
+}

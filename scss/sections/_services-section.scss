@@ -3,8 +3,7 @@
  */
 
 #services {
-    max-width: 100vw;
-    height: 100vh;
+    @extend %section-dimensions;
     padding:$section-pt;
     border-top: 2px solid rgba(24, 54, 97,0.2);
 }
@@ -64,15 +63,12 @@
 
         .card-overlay {
             top: 0;left:0; bottom: 0; right: 0;
-            display: flex;
+            @extend %flex-centered;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             background-color: rgba(162, 168, 211,0.5);
             opacity:0;
             transition: opacity 0.3s ease-in;
             
-        
             a {
                 display: inline-block;
                 text-decoration: none;
@@ -84,7 +80,6 @@
                 box-shadow: 0 0.5em 0.5em 0.1em rgba(0,0,0,0.5);
                 margin: 1rem 0;
                 
-
                 &:active {
                     box-shadow: 0 0.3em 0.5em 0.1em rgba(0,0,0,0.2);
                 }
