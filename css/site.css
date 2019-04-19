@@ -596,7 +596,7 @@ article.section-two {
   border-top: 2px solid rgba(24, 54, 97, 0.2); }
   @media (max-width: 700px) {
     #projects {
-      padding: 1.6rem; } }
+      padding-top: 1.6rem; } }
   #projects .projects-wrapper {
     padding-top: 1.5rem;
     display: flex;
@@ -608,8 +608,7 @@ article.section-two {
       flex-grow: 1;
       height: 50%;
       position: relative;
-      transition: flex-grow 0.4s ease-in;
-      border: 1px solid black; }
+      transition: flex-grow 0.4s ease-in; }
       #projects .projects-wrapper .project .project-content {
         margin: 0.5rem;
         border-radius: 0.5rem;
@@ -644,7 +643,10 @@ article.section-two {
 
 #contacts {
   border-top: 2px solid rgba(24, 54, 97, 0.2);
-  padding-top: 4rem; }
+  padding-top: 3rem; }
+  @media (max-width: 700px) {
+    #contacts {
+      padding-top: 1.6rem; } }
   #contacts ul {
     display: flex;
     justify-content: center;
@@ -746,17 +748,19 @@ article.section-two {
 
 @media screen and (max-width: 900px) {
   #contacts {
-    padding-top: calc($section-pt / 2); }
+    height: auto; }
     #contacts ul {
-      display: block; }
+      display: block;
+      width: 50%;
+      margin: 1rem auto; }
     #contacts .container {
       width: 90vw;
-      height: 90vh;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      position: relative; }
+      flex-direction: column; }
       #contacts .container iframe {
-        width: 100%; } }
+        width: 100%;
+        margin-bottom: 2rem; } }
 
 .site-footer {
   background-color: #a2a8d3;
