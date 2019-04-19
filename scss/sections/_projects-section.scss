@@ -1,71 +1,71 @@
 #projects {
     @extend %section-dimensions;
-    padding: $section-pt;
+    padding: $section-pt 2rem;
     border-top: 2px solid rgba(24, 54, 97,0.2);
-}
 
-.projects-wrapper {
-    padding-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 80%;
-    
+    @include screen-width('phone') { padding: $section-pt / 2.5; }
 
-    .project {
-        flex: 1;
-        @extend %flex-centered;
-        height: 50%;
-        position: relative;
-        transition: flex-grow 0.4s ease-in;
-    
+    .projects-wrapper {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        
 
-        .project-content {
-            @extend %flex-centered;
-            margin: 0.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.5);
-            overflow: hidden;
-            position: relative;
+        .project {
             flex-grow: 1;
+            @extend %flex-centered;
+            height: 50%;
+            position: relative;
             transition: flex-grow 0.4s ease-in;
-            
-            &:before {
-                @extend %pseudo-elements;
-                padding-top: 60%;
-                
-            }
+            border: 1px solid black;
+        
 
-            img {
-                width: 100%;
-                height: auto;
-                position: absolute;
-                top: 50%; left:50%;
-                transform: translate(-50%,-50%);   
-            }
-
-            h3 {
+            .project-content {
+                @extend %flex-centered;
+                margin: 0.5rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.5);
+                overflow: hidden;
                 position: relative;
-                z-index: 10;
+                flex-grow: 1;
+                transition: flex-grow 0.4s ease-in;
+                
+                &:before {
+                    @extend %pseudo-elements;
+                    padding-top: 60%;
+                    
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 50%; left:50%;
+                    transform: translate(-50%,-50%);   
+                }
 
                 a {
+                    position: relative;
+                    z-index: 10;
                     text-decoration: none;
                     color: aliceblue;
                     font-size: 1.2em;
+                    font-weight: bold;
+                }
+                
+                &::after {
+                    @extend %pseudo-box;
+                    right: 0; bottom: 0;
+                    background: rgba(0,0,0,0.4);
                 }
             }
 
-            &::after {
-                @extend %pseudo-box;
-                right: 0; bottom: 0;
-                background: rgba(0,0,0,0.4);
+            &:hover {
+                flex-grow:2;
             }
         }
-
-        &:hover {
-            flex-grow:2;
-        }
     }
-    
-  
 }

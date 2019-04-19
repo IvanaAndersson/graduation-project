@@ -39,7 +39,7 @@
 @media screen and (max-width: 440px) {
     .site-header {
     
-        h1 { font-size: calc($h1-size / 2); }
+        h1 { font-size: $h1-size / 1.5; }
 
         h1, p { margin-bottom: $mb-general; }
 
