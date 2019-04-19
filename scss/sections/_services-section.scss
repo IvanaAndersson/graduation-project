@@ -57,7 +57,7 @@
         } 
     }
 
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 650px)    {
         .main-wrapper {
             height: auto;
             padding: 2rem;
@@ -66,6 +66,23 @@
             .card-wrapper {
                 margin-bottom: 0;
                 margin: 1rem;
+
+                .card-content {
+                    padding: 0.5rem;}
+            }
+        }
+    }
+
+    @media screen and (max-height: 450px) {
+        .main-wrapper {
+            height: auto;
+            flex-direction: row;
+                        
+            .card-wrapper {
+                margin-bottom: 0;
+
+                .card-content {
+                    padding: 0.5rem;}
             }
         }
     }
@@ -319,4 +336,3 @@
     }
 
 }
-
