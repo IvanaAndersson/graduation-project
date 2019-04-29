@@ -52,39 +52,45 @@
     @extend %flex-centered;
 
     li {
-        
-        &::before {
-            @extend %pseudo-elements;
-            font-size: 1.5em;
-            margin: 1rem;
-        }
-
-        &.fa-facebook::before {
-            content: '\f09a';
-        }
-
-        &.fa-instagram::before {
-            content: '\f16d';
-        }
-        &.fa-twitter::before {
-            content: '\f099';
-        }
-        &.fa-github::before {
-            content: '\f09b';
-        }
-        &.fa-codepen::before {
-            content: '\f1cb';
-        }
-
-        
+        list-style-type: none;
 
         a {
-        display: block;
+        display: inline-block;
         color: $color-text-header;
         padding: 1rem;
+        outline: none;
 
             .media-icon {
                 display: none;
+            }
+
+            &::before {
+                display: inline-block;
+                content: '';
+                font-size: 1.5em;
+                margin: 1rem;
+            }
+    
+            &.fa-facebook::before {
+                content: '\f09a';
+            }
+    
+            &.fa-instagram::before {
+                content: '\f16d';
+            }
+            &.fa-twitter::before {
+                content: '\f099';
+            }
+            &.fa-github::before {
+                content: '\f09b';
+            }
+            &.fa-codepen::before {
+                content: '\f1cb';
+            }
+
+            &:hover, 
+            &:focus {
+                color: $color-details;
             }
             
         }

@@ -19,7 +19,7 @@ html {
   justify-content: center;
   align-items: center; }
 
-#projects .projects-wrapper .project .project-content::after, .site-header h1::after, .social-media-icons li::before, #projects .projects-wrapper .project .project-content:before, #contacts ul li::before {
+#projects .projects-wrapper .project .project-content::after, .site-header h1::after, #projects .projects-wrapper .project .project-content:before, #contacts ul li::before {
   display: block;
   content: ''; }
 
@@ -30,7 +30,7 @@ html {
 
 .site-header, #services, #projects, #contacts {
   max-width: 100vw;
-  height: 100vh; }
+  min-height: 100vh; }
 
 html {
   font-size: 12px;
@@ -208,25 +208,32 @@ html {
 
 .social-media-icons {
   grid-row: 3 /span 1; }
-  .social-media-icons li::before {
-    font-size: 1.5em;
-    margin: 1rem; }
-  .social-media-icons li.fa-facebook::before {
-    content: '\f09a'; }
-  .social-media-icons li.fa-instagram::before {
-    content: '\f16d'; }
-  .social-media-icons li.fa-twitter::before {
-    content: '\f099'; }
-  .social-media-icons li.fa-github::before {
-    content: '\f09b'; }
-  .social-media-icons li.fa-codepen::before {
-    content: '\f1cb'; }
-  .social-media-icons li a {
-    display: block;
-    color: #183661;
-    padding: 1rem; }
-    .social-media-icons li a .media-icon {
-      display: none; }
+  .social-media-icons li {
+    list-style-type: none; }
+    .social-media-icons li a {
+      display: inline-block;
+      color: #183661;
+      padding: 1rem;
+      outline: none; }
+      .social-media-icons li a .media-icon {
+        display: none; }
+      .social-media-icons li a::before {
+        display: inline-block;
+        content: '';
+        font-size: 1.5em;
+        margin: 1rem; }
+      .social-media-icons li a.fa-facebook::before {
+        content: '\f09a'; }
+      .social-media-icons li a.fa-instagram::before {
+        content: '\f16d'; }
+      .social-media-icons li a.fa-twitter::before {
+        content: '\f099'; }
+      .social-media-icons li a.fa-github::before {
+        content: '\f09b'; }
+      .social-media-icons li a.fa-codepen::before {
+        content: '\f1cb'; }
+      .social-media-icons li a:hover, .social-media-icons li a:focus {
+        color: #dd6b4d; }
 
 @media screen and (min-width: 850px) {
   .site-header {
@@ -289,7 +296,10 @@ article.section-one {
     font-size: 1em; }
   .hexagon div a {
     text-decoration: none;
+    outline: none;
     color: #183661; }
+    .hexagon div a:hover, .hexagon div a:focus {
+      color: #dd6b4d; }
 
 .hexagon img {
   display: block;
@@ -411,15 +421,18 @@ article.section-two {
             display: block;
             flex-grow: 1;
             text-decoration: none;
+            outline: none;
             padding: 1.2rem 1.7rem;
             background-color: #e7eaf6;
             color: #183661;
             font-weight: 600; }
             #services .main-wrapper .card-wrapper .service-card .card-overlay a:last-child {
               border-left: 2px solid #a2a8d3; }
+            #services .main-wrapper .card-wrapper .service-card .card-overlay a:hover, #services .main-wrapper .card-wrapper .service-card .card-overlay a:focus {
+              background-color: #183661;
+              color: #e7eaf6; }
   @media screen and (min-width: 650px) {
     #services .main-wrapper {
-      height: auto;
       padding: 2rem;
       flex-direction: row; }
       #services .main-wrapper .card-wrapper {
@@ -429,13 +442,15 @@ article.section-two {
           padding: 0.5rem; } }
   @media screen and (max-height: 450px) {
     #services .main-wrapper {
-      height: auto;
       flex-direction: row; }
       #services .main-wrapper .card-wrapper {
         margin-bottom: 0; }
         #services .main-wrapper .card-wrapper .card-content {
           padding: 0.5rem; } }
-  @media (hover: hover) and (pointer: fine) {
+
+@media (hover: hover) and (pointer: fine) {
+  #services {
+    height: 100vh; }
     #services .main-wrapper {
       height: 60%;
       padding: 2rem; }
@@ -473,7 +488,7 @@ article.section-two {
                 box-shadow: 0 0.3em 0.5em 0.1em rgba(0, 0, 0, 0.2); }
         #services .main-wrapper .card-wrapper:hover .card-overlay {
           opacity: 1; } }
-  @media screen and (min-width: 1100px) {
+  @media screen and (hover: hover) and (pointer: fine) and (min-width: 1100px) {
     #services .card-wrapper {
       flex: 1 1 25%;
       margin: 5%; }
@@ -640,9 +655,12 @@ article.section-two {
           position: relative;
           z-index: 10;
           text-decoration: none;
+          outline: none;
           color: aliceblue;
           font-size: 1.2em;
           font-weight: bold; }
+          #projects .projects-wrapper .project .project-content a:hover, #projects .projects-wrapper .project .project-content a:focus {
+            text-decoration: underline; }
         #projects .projects-wrapper .project .project-content::after {
           right: 0;
           bottom: 0;
@@ -829,15 +847,19 @@ article.section-two {
       #contacts .container .form .button {
         display: block;
         font-family: "Montserrat";
-        background-color: #dd6b4d;
         border: 2px solid #dd6b4d;
+        background-color: #dd6b4d;
         color: #fff;
         border-radius: 0.3rem;
         font-weight: 500;
         padding: 0.8rem 1.5rem;
         margin-top: auto;
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto;
+        outline: none; }
+        #contacts .container .form .button:hover, #contacts .container .form .button:focus {
+          background-color: #fff;
+          color: #dd6b4d; }
 
 @media screen and (max-width: 900px) {
   #contacts {

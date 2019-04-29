@@ -36,7 +36,12 @@ article.section-one {
 
         a {
             text-decoration: none;
+            outline: none;
             color: $color-text-header;
+
+            &:hover, &:focus {
+                color: $color-details;
+            }
         }
     }
 
