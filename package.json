@@ -1,5 +1,5 @@
 {
-  "name": "graduation-project",
+  "name": "northern-star-it",
   "version": "1.0.0",
   "description": "my project for the CSS Advanced course",
   "main": "index.js",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IvanaAndersson/graduation-project.git"
+    "url": "git+https://github.com/IvanaAndersson/northern-star-it.git"
   },
   "author": "Ivana Andersson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IvanaAndersson/graduation-project/issues"
+    "url": "https://github.com/IvanaAndersson/northern-star-it/issues"
   },
-  "homepage": "https://github.com/IvanaAndersson/graduation-project#readme"
+  "homepage": "https://github.com/IvanaAndersson/northern-star-it#readme"
 }
